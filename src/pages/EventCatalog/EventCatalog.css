@@ -1,0 +1,17 @@
+.event-catalog{
+    margin:auto 100px 100px 100px;
+    justify-content: space-between;
+}
+
+.event-catalog .card{
+    max-width: 300px;
+    min-width: 250px;
+
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    padding: 0 !important;
+}
+

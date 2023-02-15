@@ -1,14 +1,24 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import AddEvent from './Admin/AddEvent/AddEvent';
-import Navbar from './components/Navbar/Navbar';
+import EventCatalog from './pages/EventCatalog/EventCatalog';
+import Navbar from './components/Navbar/Navbar.jsx';
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
+import EventOverview from './pages/EventOverview/EventOverview';
 
 function App() {
   return (
-    <div className="App">
-      <AddEvent/>
-     <Navbar/>
-    </div>
+    <>
+      <Navbar/>
+      <BrowserRouter>
+        <Routes>
+            <Route  path="/events" element={<EventCatalog/>}></Route>
+            <Route  path="/event-overview/:id" element={<EventOverview/>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+    
+ 
   );
 }
 
