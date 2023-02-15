@@ -12,6 +12,7 @@ function App() {
       <Navbar/>
       <BrowserRouter>
         <Routes>
+            <Route  path="/addEvent" element={<AddEvent/>}></Route>
             <Route  path="/events" element={<EventCatalog/>}></Route>
             <Route  path="/event-overview/:id" element={<EventOverview/>}></Route>
         </Routes>

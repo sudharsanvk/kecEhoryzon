@@ -65,7 +65,7 @@ app.use(express.urlencoded({extended:true}))
 //     });
 //   }));  
 
-const connectDB=async()=>{await mongoose.connect('mongodb://localhost:27017/kecEhoryzon')}
+const connectDB=async()=>{await mongoose.connect('mongodb://127.0.0.1:27017/kecEhoryzon')}
 
 connectDB().then(()=>{
     console.log("DB connected")

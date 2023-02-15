@@ -1,5 +1,18 @@
 form{
     width: 50%;
     margin: auto;
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
 }
+.addForm{
+border: 2px solid black;
+border-radius: 20px;
+margin-left: 12cm;
+margin-right: 12cm;
+margin-top: 1cm;
+padding-top: 1cm;
+padding-bottom: 1cm;
+
+}      
