@@ -16,6 +16,44 @@ const app = express()
 app.use(cors())
 app.use(express.urlencoded({extended:true})) 
 
+
+const stripe = require('stripe')('sk_test_51MbbQNSIGeKLVLNO1jrWxhXrJkDPgekIu2IksOsVYqio57TSSCv4mccFv2i9wneBWQfjXRU6rjNWacuq1zHrJ7er00oP8iaIMh')
+
+app.post('/create-checkout-session', async (req, res) => {
+  const session = await stripe.checkout.sessions.create({
+    line_items: [
+      {
+        price_data: {
+          currency: 'inr',
+          product_data: {
+            name: 'T-shirt',
+          },
+          unit_amount: 2000,
+        },
+        quantity: 1,
+      },
+    ],
+    mode: 'payment',
+    success_url: 'http://localhost:3000/success',
+    cancel_url: 'http://localhost:3000/cancel',
+  });
+  res.redirect(303, session.url);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // app.use(require("express-session")({
 //     secret:"secret",
 //     resave: false,
