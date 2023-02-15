@@ -10,4 +10,10 @@
     margin: auto;
     display: flex;
     justify-content: space-evenly; 
+    margin-top: 2cm;
+}
+
+.btn{
+    /* //margin-left: 5cm; */
+    margin-top: 10px;
 }
